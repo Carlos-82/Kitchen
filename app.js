@@ -11,6 +11,9 @@ const favicon = require('serve-favicon');
 const hbs = require('hbs');
 const mongoose = require('mongoose');
 
+const session = require("express-session");
+const Mongose = require("connect-mongo")(session);
+
 mongoose
   .connect('mongodb://localhost/Kitchen-Cuisine', {
     useNewUrlParser: true,
