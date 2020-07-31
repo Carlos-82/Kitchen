@@ -16,9 +16,14 @@ Link a [Figma](https://www.figma.com/file/678KPRyOMKx0M7MFAAqOeb/Untitled?node-i
 - New-Recipe: El usuario podrá crear sus recetas mediante un formulario que, posteriormente, será visible en su perfil.
 - Edit-Recipe: El usuario podrá modificar la receta seleccionada.
 - Recipe: Muestra una descripción detallada de la receta seleccionada según la información introducida por el usuario al crearla o editarla.
+
 ## Backlog
 * Permitir a los usuarios compartir sus recetas.
-* Permitir a los usuarios comentar y puntuar las recetas de otros usuarios
+* Permitir a los usuarios buscar, comentar y puntuar las recetas de otros usuarios
+* Editar/eliminar perfil de usuario.
+* Añadir recetas a favoritos.
+
+
 ## Server Routes
 
 
