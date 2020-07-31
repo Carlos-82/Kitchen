@@ -4,7 +4,8 @@
 
 Esta app permite a los usuarios crear, guardar y ediar sus propias recetas de cocina. Olvídate de las libretas!!
 
-Link a [Wireframes](https://wireframe.cc/zxxbiL)
+
+Link a [Figma](https://www.figma.com/file/678KPRyOMKx0M7MFAAqOeb/Untitled?node-id=0%3A1)
 
 ## User Stories
 
@@ -16,7 +17,16 @@ Link a [Wireframes](https://wireframe.cc/zxxbiL)
 - Edit-Recipe: El usuario podrá modificar la receta seleccionada.
 - Recipe: Muestra una descripción detallada de la receta seleccionada según la información introducida por el usuario al crearla o editarla.
 
+## Backlog
+* Permitir a los usuarios compartir sus recetas.
+* Permitir a los usuarios buscar, comentar y puntuar las recetas de otros usuarios
+* Editar/eliminar perfil de usuario.
+* Añadir recetas a favoritos.
+
+
 ## Server Routes
+
+
 
 | Method | Route                       | Description                                                      | Request-Body                                                                                                                                                     |
 | ------ | --------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -27,12 +37,13 @@ Link a [Wireframes](https://wireframe.cc/zxxbiL)
 | Post   | /signup                     | Sends SignUp info to the server and creates User in DB           | {username, email, password}                                                                                                                                      |
 | Get    | /private/user               | Main page. Renders the user mainpage                             |                                                                                                                                                                  |
 | Get    | /private/newrecipe          | Render new recipe form view                                      |
-| Post   | /private/newrecipe          | Sends Recipe info to the server and creates the recipe in the DB | {namerecipe, typeofcuisine, dishtype, difftultylevel, numberofportions, preparationtime, cookingtime, ingredients, preparation, linktotheoriginal, notes, image} |
+| Post   | /private/newrecipe          | Sends Recipe info to the server and creates the recipe in the DB | {namerecipe, typeofcuisine, dishtype, difftultylevel, numberofportions, preparationtime, cookingtime, ingredients, preparation, linktotheoriginalrecipe, notes, image} |
 | Get    | /private/recipe/:recipeId   | Render the complete information of the recipe                    |                                                                                                                                                                  |
-| Put    | /private/recipe/edit-recipe | Sends edit-recipe info and update the recipe in the DB           | {namerecipe, typeofcuisine, dishtype, difftultylevel, numberofportions, preparationtime, cookingtime, ingridients, preparation, linktotheoriginal, notes, image} |
-| Delete | /private/recipe/:recipeId   | Deletes the existing recipe from the DB                          |                                                                                                                                                                  |
+| Put    | /private/recipe/:recipeId/edit  | Sends edit-recipe info and update the recipe in the DB           | {namerecipe, typeofcuisine, dishtype, difftultylevel, numberofportions, preparationtime, cookingtime, ingredients, preparation, linktotheoriginalrecipe, notes, image} |
+| Delete | /private/recipe/:recipeId/delete | Deletes the existing recipe from the DB                          |                                                                                                                                                                 |
 
-Link a [Figma](https://www.figma.com/file/678KPRyOMKx0M7MFAAqOeb/Untitled?node-id=0%3A1)
+
+Cambios después de la visita de UX/UI: Link a [Wireframes](https://wireframe.cc/zxxbiL)
 
 Link a [Trello](https://trello.com/b/aZlFHWAZ/kitchen-recipe)
 
@@ -42,29 +53,29 @@ Link a [Trello](https://trello.com/b/aZlFHWAZ/kitchen-recipe)
 
 {
 
-- userName : type String;
-- email : type String;
+- userName : type String.
+- email : type String.
 - password: type String;
-- userImage: ¿undefined?
-- aboutMe: type String;
-- recipesId: [String];
+- userImage: type String,
+- aboutMe: type String.
+- recipesId: { type: Schema.Types.ObjectId, ref: 'Recipe' },
   }
 
 ### Modelo Recipe:
 
 {
 
-- userId: type String;
-- nameRecipe: type String;
-- typeOfCuisine: type String;
-- dishType: type String;
-- difftultyLevel: type String;
-- numberofportions: type String;
-- preparationTime: type String;
-- cookingTime: type number;
+- userId: { type: Schema.Types.ObjectId, ref: 'User' },
+- nameRecipe: type String,
+- typeOfCuisine: type String,
+- dishType: type String, enum :["breakfast", "main dish", "side dish", "drink", "dessert", "appetizer"],
+- difftultyLevel: type String,
+- numberofportions: type Number,
+- preparationTime: type String,
+- cookingTime: type number,
 - ingredients: [String];
-- preparation: type String;
-- linkToTheOriginalRecipe: type String;
-- notes: type String;
-- recipeImage: ¿undefined?
+- preparation: type String,
+- linkToTheOriginalRecipe: type String,
+- notes: type String,
+- recipeImage: type String,
   }
