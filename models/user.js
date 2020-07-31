@@ -2,11 +2,13 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
+  userName: String,
   name: String,
   email: String,
   password: String,
-  isLaunderer: { type: Boolean, default: false },
-  fee: { type: Number, default: null }
+  userImage: String,
+  aboutMe: String,
+  recipesId: {type: Schema.Types.ObjectId, ref:'Recipe'},
 });
 
 userSchema.set('timestamps', true);
