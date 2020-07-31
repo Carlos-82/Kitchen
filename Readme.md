@@ -36,6 +36,8 @@ Link a [Figma](https://www.figma.com/file/678KPRyOMKx0M7MFAAqOeb/Untitled?node-i
 | Get    | /private/recipe/:recipeId   | Render the complete information of the recipe                    |                                                                                                                                                                  |
 | Put    | /private/recipe/:recipeId/edit  | Sends edit-recipe info and update the recipe in the DB           | {namerecipe, typeofcuisine, dishtype, difftultylevel, numberofportions, preparationtime, cookingtime, ingredients, preparation, linktotheoriginalrecipe, notes, image} |
 | Delete | /private/recipe/:recipeId/delete | Deletes the existing recipe from the DB                          |                                                                                                                                                                 |
+
+
 Link a [Wireframes](https://wireframe.cc/zxxbiL) cambios después de la visita de UX/UI.
 
 Link a [Trello](https://trello.com/b/aZlFHWAZ/kitchen-recipe)
