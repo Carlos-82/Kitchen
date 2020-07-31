@@ -38,7 +38,7 @@ Link a [Figma](https://www.figma.com/file/678KPRyOMKx0M7MFAAqOeb/Untitled?node-i
 | Delete | /private/recipe/:recipeId/delete | Deletes the existing recipe from the DB                          |                                                                                                                                                                 |
 
 
-Link a [Wireframes](https://wireframe.cc/zxxbiL) cambios después de la visita de UX/UI.
+Cambios después de la visita de UX/UI: Link a [Wireframes](https://wireframe.cc/zxxbiL)
 
 Link a [Trello](https://trello.com/b/aZlFHWAZ/kitchen-recipe)
 
