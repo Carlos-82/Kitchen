@@ -11,11 +11,7 @@ const favicon = require('serve-favicon');
 const hbs = require('hbs');
 const mongoose = require('mongoose');
 const session = require("express-session");
-<<<<<<< HEAD
-const MongoseStore = require("connect-mongo")(session);
-=======
 const MongoStore = require("connect-mongo")(session);
->>>>>>> login
 
 mongoose
   .connect('mongodb://localhost/kitchen-cuisine', {
@@ -33,12 +29,8 @@ mongoose
   });
 
 const indexRouter = require('./routes/index');
-<<<<<<< HEAD
 const authRouter = require('./routes/auth')
 
-=======
-const router = require("./routes/auth");
->>>>>>> login
 const app = express();
 
 // view engine setup
@@ -58,12 +50,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 app.use('/', indexRouter);
-<<<<<<< HEAD
 app.use('/', authRouter);
 
-=======
-app.use("/", router);
->>>>>>> login
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
