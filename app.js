@@ -12,10 +12,11 @@ const hbs = require('hbs');
 const mongoose = require('mongoose');
 
 const session = require("express-session");
-const Mongose = require("connect-mongo")(session);
+const MongoseStore = require("connect-mongo")(session);
 
 mongoose
-  .connect('mongodb://localhost/Kitchen-Cuisine', {
+  .connect('mongodb://localhost/kitchen-cuisine', {
+    useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -29,6 +30,7 @@ mongoose
   });
 
 const indexRouter = require('./routes/index');
+const authRouter = require('./routes/auth')
 
 const app = express();
 
@@ -49,6 +51,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 app.use('/', indexRouter);
+app.use('/', authRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
