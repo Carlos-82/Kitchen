@@ -46,16 +46,22 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({
-  secret: "olvídate de las libretas",
-  resave: true,
-  saveUninitialized: true,
-  cookie: { maxAge: 60000 },
-  store: new MongoStore({
-    mongooseConnection: mongoose.connection,
-    ttl: 24 * 60 * 60, //1 día
-    })
-}));
+
+app.use(
+  session({
+    secret: "Olvidate de las libretas para apuntar tus recetas",
+    resave: true,
+    saveUninitialized: true,
+    cookie: {
+      maxAge: 60000
+    },
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection,
+      ttl: 24 * 60 * 60,
+    }),
+  })
+);
+
 app.use((req, res, next) => {
   if (req.session.currentUser) {
     res.locals.currentUserInfo = req.session.currentUser;
