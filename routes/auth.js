@@ -49,7 +49,7 @@ authRouter.post("/signup", (req, res, next) => {
                     password: hashPass
                 })
                 .then(() => {
-                    res.redirect("/");
+                    res.redirect("/recipes");
                 })
                 .catch((error) => {
                     console.log(error)
