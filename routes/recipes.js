@@ -3,7 +3,7 @@ const recipesRouter = express.Router();
 
 const User = require("../models/user");
 const Recipe = require("../models/recipe");
-
+const parser = require("./../config/cloudinary");
 recipesRouter.use((req, res, next) => {
     if (req.session.currentUser) {
         next();
@@ -24,11 +24,11 @@ recipesRouter.get("/mainpage", async (req, res, next) => {
     });
 })
 
-recipesRouter.get("/create", (req, res, next, ) => {
+recipesRouter.get("/create",(req, res, next, ) => {
     res.render("recipes/create");
 });
 
-recipesRouter.post("/create", (req, res, next, ) => {
+recipesRouter.post("/create", parser.single('foodimage'), (req, res, next, ) => {
     const createdRecipe = {
         nameRecipe: req.body.nameRecipe,
         typeOfCuisine: req.body.typeOfCuisine,
@@ -38,10 +38,10 @@ recipesRouter.post("/create", (req, res, next, ) => {
         preparationTime: req.body.preparationTime,
         cookingTime: req.body.cookingTime,
         ingredients: req.body.ingredients,
-        preparation: req.body.preparation,
+        method: req.body.method,
         linktoTheOriginalRecipe: req.body.linkToTheOriginalRecipe,
         notes: req.body.notes,
-        recipeImage: req.body.recipeImage,
+        recipeImage: req.file.secure_url,
     };
     const userId = req.session.currentUser._id;
     const theRecipe = new Recipe(createdRecipe);

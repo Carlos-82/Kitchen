@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const recipeSchema = new Schema({
     userId: {
         type: Schema.Types.ObjectId,
-        ref: "User",
+        ref: "user",
     },
     nameRecipe: {
         type: String
@@ -41,7 +41,7 @@ const recipeSchema = new Schema({
     ingredients: {
         type: String
     },
-    preparation: {
+    method: {
         type: String
     },
     linkToTheOriginalRecipe: {
@@ -52,7 +52,7 @@ const recipeSchema = new Schema({
     },
     recipeImage: {
         type: String,
-        default: "/models/images/jap8bits.jpg"
+        default: "/models/images/food.jpg"
     },
 });
 

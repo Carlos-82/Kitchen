@@ -10,12 +10,12 @@ const bodyParser = require('body-parser');
 const favicon = require('serve-favicon');
 const hbs = require('hbs');
 const mongoose = require('mongoose');
-
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 
 mongoose
   .connect('mongodb://localhost/kitchen-cuisine', {
+  
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true

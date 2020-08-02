@@ -96,7 +96,7 @@ authRouter.post("/login", (req, res, next) => {
         req.session.currentUser = theUser;
         res.redirect("mainpage");
     });
-});
 
+});
 
 module.exports = authRouter;
