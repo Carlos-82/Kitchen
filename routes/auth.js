@@ -49,7 +49,7 @@ authRouter.post("/signup", (req, res, next) => {
                     password: hashPass
                 })
                 .then(() => {
-                    res.redirect("/recipes");
+                    res.redirect("recipes/mainpage");
                 })
                 .catch((error) => {
                     console.log(error)
@@ -94,7 +94,7 @@ authRouter.post("/login", (req, res, next) => {
             return;
         }
         req.session.currentUser = theUser;
-        res.redirect("/recipes");
+        res.redirect("mainpage");
     });
 });
 
