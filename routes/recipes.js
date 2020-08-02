@@ -50,11 +50,11 @@ recipesRouter.post("/create", (req, res, next, ) => {
             next(error);
             return;
         }
-        User.findOneAndUpdate({
+        User.update({
                 "_id": userId
             }, {
                 $push: {
-                    recipe: recipe.id
+                    theRecipe: createdRecipe.id
                 }
             }, {
                 new: true
