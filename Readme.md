@@ -37,9 +37,9 @@ Link a [Figma](https://www.figma.com/file/678KPRyOMKx0M7MFAAqOeb/Untitled?node-i
 | Post   | /signup                     | Sends SignUp info to the server and creates User in DB           | {username, email, password}                                                                                                                                      |
 | Get    | /mainpage              | Main page. Renders the user mainpage                             |                                                                                                                                                                  |
 | Get    | /private/newrecipe          | Render new recipe form view                                      |
-| Post   | /private/newrecipe          | Sends Recipe info to the server and creates the recipe in the DB | {namerecipe, typeofcuisine, dishtype, difftultylevel, numberofportions, preparationtime, cookingtime, ingredients, preparation, linktotheoriginalrecipe, notes, image} |
+| Post   | /private/newrecipe          | Sends Recipe info to the server and creates the recipe in the DB | {namerecipe, typeofcuisine, dishtype, difftultylevel, numberofportions, preparationtime, cookingtime, ingredients, method, linktotheoriginalrecipe, notes, image} |
 | Get    | /private/recipe/:recipeId   | Render the complete information of the recipe                    |                                                                                                                                                                  |
-| Put    | /private/recipe/:recipeId/edit  | Sends edit-recipe info and update the recipe in the DB           | {namerecipe, typeofcuisine, dishtype, difftultylevel, numberofportions, preparationtime, cookingtime, ingredients, preparation, linktotheoriginalrecipe, notes, image} |
+| Put    | /private/recipe/:recipeId/edit  | Sends edit-recipe info and update the recipe in the DB           | {namerecipe, typeofcuisine, dishtype, difftultylevel, numberofportions, preparationtime, cookingtime, ingredients, method, linktotheoriginalrecipe, notes, image} |
 | Delete | /private/recipe/:recipeId/delete | Deletes the existing recipe from the DB                          |                                                                                                                                                                 |
 
 
@@ -74,7 +74,7 @@ Link a [Trello](https://trello.com/b/aZlFHWAZ/kitchen-recipe)
 - preparationTime: type String,
 - cookingTime: type number,
 - ingredients: [String];
-- preparation: type String,
+- method: type String,
 - linkToTheOriginalRecipe: type String,
 - notes: type String,
 - recipeImage: type String,
