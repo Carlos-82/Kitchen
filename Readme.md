@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Esta app permite a los usuarios crear, guardar y ediar sus propias recetas de cocina. Olvídate de las libretas!!
+Esta app permite a los usuarios crear, guardar y editar sus propias recetas de cocina. Olvídate de las libretas!!
 
 
 Link a [Figma](https://www.figma.com/file/678KPRyOMKx0M7MFAAqOeb/Untitled?node-id=0%3A1)
@@ -35,7 +35,7 @@ Link a [Figma](https://www.figma.com/file/678KPRyOMKx0M7MFAAqOeb/Untitled?node-i
 | Post   | / login                     | Sends login form data to the server                              | {username, password}                                                                                                                                             |
 | Get    | /SignUp                     | Render SignUp form view                                          |                                                                                                                                                                  |
 | Post   | /signup                     | Sends SignUp info to the server and creates User in DB           | {username, email, password}                                                                                                                                      |
-| Get    | /private/user               | Main page. Renders the user mainpage                             |                                                                                                                                                                  |
+| Get    | /mainpage              | Main page. Renders the user mainpage                             |                                                                                                                                                                  |
 | Get    | /private/newrecipe          | Render new recipe form view                                      |
 | Post   | /private/newrecipe          | Sends Recipe info to the server and creates the recipe in the DB | {namerecipe, typeofcuisine, dishtype, difftultylevel, numberofportions, preparationtime, cookingtime, ingredients, preparation, linktotheoriginalrecipe, notes, image} |
 | Get    | /private/recipe/:recipeId   | Render the complete information of the recipe                    |                                                                                                                                                                  |
