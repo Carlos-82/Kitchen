@@ -15,6 +15,7 @@ const MongoStore = require("connect-mongo")(session);
 
 mongoose
   .connect('mongodb://localhost/kitchen-cuisine', {
+  
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true

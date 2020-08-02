@@ -22,7 +22,7 @@ const userSchema = new Schema({
   },
   recipesId: {
     type: Schema.Types.ObjectId,
-    ref: 'Recipe'
+    ref: 'recipe'
   },
 });
 
