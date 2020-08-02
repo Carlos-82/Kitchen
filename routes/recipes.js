@@ -4,6 +4,11 @@ const recipesRouter = express.Router();
 const User = require("../models/user");
 const Recipe = require("../models/recipe");
 const parser = require("./../config/cloudinary");
+const {
+    get
+} = require("mongoose");
+
+
 recipesRouter.use((req, res, next) => {
     if (req.session.currentUser) {
         next();
@@ -24,7 +29,7 @@ recipesRouter.get("/mainpage", async (req, res, next) => {
     });
 })
 
-recipesRouter.get("/create",(req, res, next, ) => {
+recipesRouter.get("/create", (req, res, next) => {
     res.render("recipes/create");
 });
 
@@ -51,7 +56,7 @@ recipesRouter.post("/create", parser.single('foodimage'), (req, res, next, ) => 
             return;
         }
         User.update({
-                "_id": userId
+                userId
             }, {
                 $push: {
                     theRecipe: createdRecipe.id
@@ -60,12 +65,21 @@ recipesRouter.post("/create", parser.single('foodimage'), (req, res, next, ) => 
                 new: true
             })
             .then((user) => {
-                res.redirect("recipes/mainpage")
+                res.redirect("mainpage")
             })
             .catch((error) => {
                 console.log(error);
             })
     });
 });
+
+
+
+recipesRouter.get("/userprofile", (req, res, next) => {
+    const userId = req.session.currentUser._id;
+    res.render("recipes/profile")
+})
+
+
 
 module.exports = recipesRouter;

@@ -1,0 +1,18 @@
+hello {{currentUserInfo.name}}
+
+<div>
+    <img src="/models/images/bit-face.png" alt="">
+    <h3>{{currentUserInfo.UserName}}</h3>
+    <p>name: {{currentUserInfo.name}}</p>
+    <p>email: {{currentUserInfo.email}}</p>
+    <p>About Me: {{currentUserInfo.aboutMe}}</p>
+
+</div>
+
+<form action="/editprofile">
+    <button class="button-profile">Edit Profile</button>
+</form>
+
+<form action="/index">
+    <button class="button-profile">Create Recipe</button>
+</form>

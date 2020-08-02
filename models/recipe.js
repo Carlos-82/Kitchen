@@ -31,11 +31,11 @@ const recipeSchema = new Schema({
         min: 0
     },
     preparationTime: {
-        type: Number,
+        type: String,
         min: 0
     },
     cookingTime: {
-        type: Number,
+        type: String,
         min: 0
     },
     ingredients: {

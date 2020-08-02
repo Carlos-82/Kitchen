@@ -1,11 +1,15 @@
 <form action="/create">
     <button class="yellow-button">Create Recipe</button>
 </form>
+<form action="/profile">
+    <button class="yellow-button">Create Recipe</button>
+</form>
 
-<h1>Hello {{user.userName}}</h1>
+
+<h1>Hello {{currentUserInfo.userName}}</h1>
 
 <h2>Your Recipes</h2>
 
-{{#each user.recipe}}
-<h3>{{user.recipe.name}}</h3>
+{{#each currentUserInfo}}
+<h3>{{currentUserInfo.recipesId.name}}</h3>
 {{/each}}
