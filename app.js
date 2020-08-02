@@ -12,7 +12,7 @@ const hbs = require('hbs');
 const mongoose = require('mongoose');
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
-
+const MONGODB_URI = 'mongodb://localhost:3000/kitchen-cuisine';
 mongoose
   .connect('mongodb://localhost/kitchen-cuisine', {
   

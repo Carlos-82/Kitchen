@@ -60,7 +60,7 @@ recipesRouter.post("/create", parser.single('foodimage'), (req, res, next, ) => 
                 new: true
             })
             .then((user) => {
-                res.redirect("recipes/mainpage")
+                res.redirect("mainpage")
             })
             .catch((error) => {
                 console.log(error);

@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const recipeSchema = new Schema({
-    userId: {
-        type: Schema.Types.ObjectId,
-        ref: "user",
-    },
+    userId: [{
+        type: Schema.ObjectId,
+        ref: "user"
+    }],
     nameRecipe: {
         type: String
     },
@@ -31,11 +31,11 @@ const recipeSchema = new Schema({
         min: 0
     },
     preparationTime: {
-        type: Number,
+        type: String,
         min: 0
     },
     cookingTime: {
-        type: Number,
+        type: String,
         min: 0
     },
     ingredients: {

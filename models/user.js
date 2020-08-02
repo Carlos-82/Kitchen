@@ -20,10 +20,10 @@ const userSchema = new Schema({
   aboutMe: {
     type: String,
   },
-  recipesId: {
-    type: Schema.Types.ObjectId,
+  recipesId: [{
+    type: Schema.ObjectId,
     ref: 'recipe'
-  },
+  }],
 });
 
 userSchema.set('timestamps', true);
