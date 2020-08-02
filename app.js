@@ -29,7 +29,8 @@ mongoose
   });
 
 const indexRouter = require('./routes/index');
-const authRouter = require('./routes/auth')
+const authRouter = require('./routes/auth');
+const recipesRouter = require('./routes/recipes');
 
 const app = express();
 
@@ -47,10 +48,37 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(
+  session({
+    secret: "Olvidate de las libretas para apuntar tus recetas",
+    resave: true,
+    saveUninitialized: true,
+    cookie: {
+      maxAge: 60000
+    },
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection,
+      ttl: 24 * 60 * 60,
+    }),
+  })
+);
+
+app.use((req, res, next) => {
+  if (req.session.currentUser) {
+    res.locals.currentUserInfo = req.session.currentUser;
+    res.locals.isUserLoggedIn = true;
+  } else {
+    res.locals.isUserLoggedIn = false;
+  }
+
+  next();
+});
+
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 app.use('/', indexRouter);
 app.use('/', authRouter);
+app.use('/', recipesRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

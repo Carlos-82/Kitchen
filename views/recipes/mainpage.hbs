@@ -1,0 +1,11 @@
+<form action="/create">
+    <button class="yellow-button">Create Recipe</button>
+</form>
+
+<h1>Hello {{user.userName}}</h1>
+
+<h2>Your Recipes</h2>
+
+{{#each user.recipe}}
+<h3>{{user.recipe.name}}</h3>
+{{/each}}
