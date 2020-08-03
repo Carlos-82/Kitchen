@@ -75,6 +75,8 @@ recipesRouter.post("/create", parser.single("foodimage"), (req, res, next) => {
         });
 
 });
+
+
 //route to detailrecipe
 recipesRouter.get("/detailrecipe/:recipeId", (req,res, next) =>{
     const recipeId = req.params.recipeId;
@@ -87,6 +89,32 @@ recipesRouter.get("/detailrecipe/:recipeId", (req,res, next) =>{
     })
    });
 
+//DELETE RECIPE
+recipesRouter.get("/detailrecipe/:recipeId/deleterecipe", (req,res,next) => {
+    const recipeId = req.params.recipeId;
+    const userId = req.session.currentUser._id;
+    User.findByIdAndUpdate(userId,{
+        $pull:{
+            recipesId: recipeId
+        }
+    })
+    .then(user=>
+        console.log("Hola", user)
+    )
+    .catch(error =>
+        console.log(error)
+    )
+    Recipe.findByIdAndDelete(recipeId)
+    .then(recipe => 
+    console.log("the recipe has been deleted", recipe),
+    res.render("mainpage")
+    )
+    .catch(error =>
+        console.log(error)
+    )
+    
+});
+//EDIT RECIPE
 recipesRouter.get("/detailrecipe/:recipeId/editrecipe", (req,res,next) =>{
     const recipeId = req.params.recipeId;
     Recipe.findById(recipeId)
