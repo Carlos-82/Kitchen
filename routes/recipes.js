@@ -75,6 +75,17 @@ recipesRouter.post("/create", parser.single("foodimage"), (req, res, next) => {
         });
 
 });
+//route to detailrecipe
+recipesRouter.get("/detailrecipe/:recipeId", (req,res, next) =>{
+    const recipeId = req.params.recipeId;
+    Recipe.findById(recipeId)
+    .then(recipe => {console.log(recipe)
+    res.render("recipes/detailrecipe", {recipe})})
+    .catch((error)=> {
+        console.log(error);
+
+    })
+   });
 
 
 
@@ -123,5 +134,6 @@ recipesRouter.post(
         });
     }
 );
+
 
 module.exports = recipesRouter;
