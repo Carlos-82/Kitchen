@@ -1,7 +1,7 @@
 hello {{currentUserInfo.userName}}
 
 <div>
-    <img src="../images/bit-face.png" alt="">
+    <img src={{currentUserInfo.userImage}} alt="">
     <h3>Nick Name: {{currentUserInfo.userName}}</h3>
     <p>name: {{currentUserInfo.name}}</p>
     <p>email: {{currentUserInfo.email}}</p>
@@ -9,7 +9,7 @@ hello {{currentUserInfo.userName}}
 
 </div>
 
-<form action="/editprofile">
+<form action="editprofile">
     <button class="button-profile">Edit Profile</button>
 </form>
 
