@@ -10,6 +10,6 @@
 
 <h2>Your Recipes</h2>
 
-{{#each currentUserInfo}}
-<h3>{{currentUserInfo.recipesId.name}}</h3>
+{{#each user.recipesId}}
+<h3>{{this.nameRecipe}}</h3>
 {{/each}}
