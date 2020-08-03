@@ -96,6 +96,33 @@ recipesRouter.get("/detailrecipe/:recipeId/editrecipe", (req,res,next) =>{
         console.log(error);
     })
 });
+recipesRouter.post("/detailrecipe/:recipeId/editrecipe",parser.single("foodimage"), (req,res,next) => {
+    const recipeId = req.params.recipeId;
+    const editedRecipe = {
+        nameRecipe: req.body.nameRecipe,
+        typeOfCuisine: req.body.typeOfCuisine,
+        dishType: req.body.dishType,
+        difficultyLevel: req.body.difficultyLevel,
+        numberOfPortions: req.body.numberOfPortions,
+        preparationTime: req.body.preparationTime,
+        cookingTime: req.body.cookingTime,
+        ingredients: req.body.ingredients,
+        method: req.body.method,
+        linkToTheOriginalRecipe: req.body.linkToTheOriginalRecipe,
+        notes: req.body.notes,
+        recipeImage: req.file.secure_url,
+        userId: req.session.currentUser._id
+    };
+    Recipe.findByIdAndUpdate(recipeId, editedRecipe,{new:true})
+    .then(recipe =>{
+       console.log("Hola", recipe)
+        res.redirect(`/detailrecipe/${recipeId}`)
+    })
+    .catch(error =>{
+        console.log(error)
+    })
+
+});
 
 //route to user profile
 recipesRouter.get("/profile", async (req, res, next) => {
