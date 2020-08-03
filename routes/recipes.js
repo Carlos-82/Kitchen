@@ -76,27 +76,35 @@ recipesRouter.post("/create", parser.single("foodimage"), (req, res, next) => {
 
 });
 //route to detailrecipe
-recipesRouter.get("/detailrecipe/:recipeId", (req,res, next) =>{
+recipesRouter.get("/detailrecipe/:recipeId", (req, res, next) => {
     const recipeId = req.params.recipeId;
     Recipe.findById(recipeId)
-    .then(recipe => {console.log(recipe)
-    res.render("recipes/detailrecipe", {recipe})})
-    .catch((error)=> {
-        console.log(error);
+        .then(recipe => {
+            console.log(recipe)
+            res.render("recipes/detailrecipe", {
+                recipe
+            })
+        })
+        .catch((error) => {
+            console.log(error);
 
-    })
-   });
-
-recipesRouter.get("/detailrecipe/:recipeId/editrecipe", (req,res,next) =>{
-    const recipeId = req.params.recipeId;
-    Recipe.findById(recipeId)
-    .then(recipe => {console.log(recipe)
-    res.render("recipes/editrecipe", {recipe})})
-    .catch((error) => {
-        console.log(error);
-    })
+        })
 });
-recipesRouter.post("/detailrecipe/:recipeId/editrecipe",parser.single("foodimage"), (req,res,next) => {
+
+recipesRouter.get("/detailrecipe/:recipeId/editrecipe", (req, res, next) => {
+    const recipeId = req.params.recipeId;
+    Recipe.findById(recipeId)
+        .then(recipe => {
+            console.log(recipe)
+            res.render("recipes/editrecipe", {
+                recipe
+            })
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+});
+recipesRouter.post("/detailrecipe/:recipeId/editrecipe", parser.single("foodimage"), (req, res, next) => {
     const recipeId = req.params.recipeId;
     const editedRecipe = {
         nameRecipe: req.body.nameRecipe,
@@ -113,16 +121,44 @@ recipesRouter.post("/detailrecipe/:recipeId/editrecipe",parser.single("foodimage
         recipeImage: req.file.secure_url,
         userId: req.session.currentUser._id
     };
-    Recipe.findByIdAndUpdate(recipeId, editedRecipe,{new:true})
-    .then(recipe =>{
-       console.log("Hola", recipe)
-        res.redirect(`/detailrecipe/${recipeId}`)
-    })
-    .catch(error =>{
-        console.log(error)
-    })
+    Recipe.findByIdAndUpdate(recipeId, editedRecipe, {
+            new: true
+        })
+        .then(recipe => {
+            console.log("Hola", recipe)
+            res.redirect(`/detailrecipe/${recipeId}`)
+        })
+        .catch(error => {
+            console.log(error)
+        })
 
 });
+
+//delete route
+recipesRouter.get("/detailrecipe/:recipeId/delete", (req, res, next) => {
+    const recipeId = req.params.recipeId
+    console.log(recipeId)
+    Recipe.findByIdAndDelete(recipeId)
+        .then(recipe => console.log("The following Personal challenge has been deleted: " + recipe))
+        .catch(err => console.log("error while finding and deleting the personal challenge: " + err))
+
+    console.log("previusly user: " + req.session.currentUser)
+
+    User.findByIdAndUpdate({
+            "_id": req.session.currentUser._id
+        }, {
+            $pull: {
+                recipesId: recipeId
+            }
+        })
+        .then(() => res.render("recipes/mainpage"))
+        .catch(err => console.log("error while deleting a personal challenge from DB: " + err))
+})
+
+
+
+
+
 
 //route to user profile
 recipesRouter.get("/profile", async (req, res, next) => {
