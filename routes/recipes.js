@@ -47,7 +47,7 @@ recipesRouter.post("/create", parser.single("foodimage"), (req, res, next) => {
         cookingTime: req.body.cookingTime,
         ingredients: req.body.ingredients,
         method: req.body.method,
-        linktoTheOriginalRecipe: req.body.linkToTheOriginalRecipe,
+        linkToTheOriginalRecipe: req.body.linkToTheOriginalRecipe,
         notes: req.body.notes,
         recipeImage: req.file.secure_url,
         userId: req.session.currentUser._id
@@ -87,7 +87,15 @@ recipesRouter.get("/detailrecipe/:recipeId", (req,res, next) =>{
     })
    });
 
-
+recipesRouter.get("/detailrecipe/:recipeId/editrecipe", (req,res,next) =>{
+    const recipeId = req.params.recipeId;
+    Recipe.findById(recipeId)
+    .then(recipe => {console.log(recipe)
+    res.render("recipes/editrecipe", {recipe})})
+    .catch((error) => {
+        console.log(error);
+    })
+});
 
 //route to user profile
 recipesRouter.get("/profile", async (req, res, next) => {
