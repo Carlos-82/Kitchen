@@ -75,6 +75,20 @@ recipesRouter.post("/create", parser.single("foodimage"), (req, res, next) => {
         });
 
 });
+
+
+//route to detailrecipe
+recipesRouter.get("/detailrecipe/:recipeId", (req,res, next) =>{
+    const recipeId = req.params.recipeId;
+    Recipe.findById(recipeId)
+    .then(recipe => {console.log(recipe)
+    res.render("recipes/detailrecipe", {recipe})})
+    .catch((error)=> {
+        console.log(error);
+
+    })
+   });
+
 //DELETE RECIPE
 recipesRouter.get("/detailrecipe/:recipeId/deleterecipe", (req,res,next) => {
     const recipeId = req.params.recipeId;
@@ -137,20 +151,6 @@ recipesRouter.post("/detailrecipe/:recipeId/editrecipe",parser.single("foodimage
     })
 
 });
-
-//route to detailrecipe
-recipesRouter.get("/detailrecipe/:recipeId", (req,res, next) =>{
-    const recipeId = req.params.recipeId;
-    Recipe.findById(recipeId)
-    .then(recipe => {console.log(recipe)
-    res.render("recipes/detailrecipe", {recipe})})
-    .catch((error)=> {
-        console.log(error);
-
-    })
-   });
-
-
 
 //route to user profile
 recipesRouter.get("/profile", async (req, res, next) => {
