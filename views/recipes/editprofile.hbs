@@ -1,0 +1,41 @@
+<header>
+    <a href="#" class="logo">Logo</a>
+    <ul>
+       <li><a href="/mainpage">Recipes</a></li>
+       <li><a href="/profile">Profile</a></li>
+       <li><a href="/create">Create</a></li>
+    </ul>
+</header>
+<section class="banner"></section>
+
+
+<h1>Hello {{currentUserInfo.userName}}</h1>
+<h2>Formulario edición user</h2>
+<form action="/editprofile" method="post" enctype="multipart/form-data">
+    <div>
+        <label for="userName">UserName</label>
+        <input type="text" name="userName" id="username" placeholder="{{currentUserInfo.userName}}">
+    </div>
+    <div>
+        <label for="name">Your name</label>
+        <input type="text" name="name" id="realname" placeholder="{{currentUserInfo.name}}">
+    </div>
+    <label for="email">Your email</label>
+    <input type="text" name="email" id="useremail" placeholder="{{currentUserInfo.email}}">
+    </div>
+    <div>
+        <label for="aboutMe"> About me</label>
+        <input type="text" name="aboutMe" id="aboutMe" placeholder="{{currentUserInfo.aboutMe}}">
+    </div>
+    <div>
+        <label for="userimage">User profile picture</label>
+        <input type="file" name="userImage" id="userimage">
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+
+<script type="text/javascript">
+window.addEventListener("scroll", function(){
+    var header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);})</script>
