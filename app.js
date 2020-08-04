@@ -58,7 +58,7 @@ app.use(
     resave: true,
     saveUninitialized: true,
     cookie: {
-      maxAge: 60000,
+      maxAge: 600000,
     },
     store: new MongoStore({
       mongooseConnection: mongoose.connection,
@@ -81,7 +81,7 @@ app.use((req, res, next) => {
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 app.use("/", indexRouter);
-app.use("/", authRouter);
+app.use("/auth", authRouter);
 app.use("/", recipesRouter);
 
 // catch 404 and forward to error handler
