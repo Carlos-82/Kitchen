@@ -1,3 +1,14 @@
+<header>
+    <a href="#" class="logo">Logo</a>
+    <ul>
+        <li><a href="/mainpage">Recipes</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/create">Create</a></li>
+    </ul>
+</header>
+<section class="banner"></section>
+
+
 <h1>Hello {{currentUserInfo.userName}}</h1>
 
 <h2>Detail recipe</h2>
@@ -17,3 +28,12 @@
 
 <button><a href="/detailrecipe/{{recipe.id}}/editrecipe">Edit recipe</a></button>
 <button type="submit"><a href="/detailrecipe/{{recipe._id}}/delete">Delete recipe</a></button>
+
+
+
+<script type="text/javascript">
+    window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })    
+</script>

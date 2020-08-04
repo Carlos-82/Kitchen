@@ -75,6 +75,8 @@ recipesRouter.post("/create", parser.single("foodimage"), (req, res, next) => {
         });
 
 });
+
+
 //route to detailrecipe
 recipesRouter.get("/detailrecipe/:recipeId", (req, res, next) => {
     const recipeId = req.params.recipeId;
@@ -91,6 +93,7 @@ recipesRouter.get("/detailrecipe/:recipeId", (req, res, next) => {
         })
 });
 
+//edit recipe
 recipesRouter.get("/detailrecipe/:recipeId/editrecipe", (req, res, next) => {
     const recipeId = req.params.recipeId;
     Recipe.findById(recipeId)
@@ -104,6 +107,7 @@ recipesRouter.get("/detailrecipe/:recipeId/editrecipe", (req, res, next) => {
             console.log(error);
         })
 });
+
 recipesRouter.post("/detailrecipe/:recipeId/editrecipe", parser.single("foodimage"), (req, res, next) => {
     const recipeId = req.params.recipeId;
     const editedRecipe = {

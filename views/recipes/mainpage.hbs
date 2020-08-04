@@ -4,6 +4,18 @@
 <form action="/profile">
     <button class="yellow-button">Profile</button>
 </form>
+<header>
+    <a href="#" class="logo">Logo</a>
+    <ul>
+       <li><a href="/mainpage">Recipes</a></li>
+       <li><a href="/profile">Profile</a></li>
+       <li><a href="/create">Create</a></li>
+    </ul>
+</header>
+<section class="banner"></section>
+
+
+
 
 
 <h1>Hello {{currentUserInfo.userName}}</h1>
@@ -13,3 +25,10 @@
 {{#each user.recipesId}}
 <h3><a href="/detailrecipe/{{this._id}}">{{this.nameRecipe}}</a></h3>
 {{/each}}
+
+
+<script type="text/javascript">
+window.addEventListener("scroll", function(){
+    var header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);})</script>
+
