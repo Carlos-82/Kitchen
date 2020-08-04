@@ -99,4 +99,18 @@ authRouter.post("/login", (req, res, next) => {
 
 });
 
+authRouter.get('/logout', (req, res, next) => {
+    if (!req.session.current) {
+        res.redirect('/');
+        return
+    }
+    req.session.destroy((err) => {
+        if (err) {
+            next(err);
+            return;
+        }
+        res.redirect('/');
+    })
+})
+
 module.exports = authRouter;
