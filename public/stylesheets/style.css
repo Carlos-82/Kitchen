@@ -10,7 +10,7 @@
 
 
 body {
-  background: rgb(122, 175, 142);
+  background: rgb(142, 248, 183);
   min-height: 200vh;
 
 
@@ -31,12 +31,14 @@ header {
   transition: 0, 6s;
   padding: 40px 100px;
   z-index: 100000;
+  background-color: #ffd900;
+  
 
 }
 
 header .sticky {
   padding: 5px 100px;
-  background: rgb(180, 180, 180);
+  background: rgb(235, 53, 53);
 }
 
 header .logo {
