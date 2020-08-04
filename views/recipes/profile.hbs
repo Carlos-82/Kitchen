@@ -1,10 +1,9 @@
-
 <header>
     <a href="#" class="logo">Logo</a>
     <ul>
-       <li><a href="/mainpage">Recipes</a></li>
-       <li><a href="/profile">Profile</a></li>
-       <li><a href="/create">Create</a></li>
+        <li><a href="/mainpage">Recipes</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/create">Create</a></li>
     </ul>
 </header>
 <section class="banner"></section>
@@ -25,13 +24,14 @@ hello {{currentUserInfo.userName}}
     <button class="button-profile">Edit Profile</button>
 </form>
 
-<form action="/index">
-    <button class="button-profile">Create Recipe</button>
+<form action="/">
+    <button class="button-profile">LogOut</button>
 </form>
 
 
 
 <script type="text/javascript">
-window.addEventListener("scroll", function(){
-    var header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 0);})</script>
+    window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })</script>
