@@ -1,32 +1,53 @@
-
-
 <header>
     <img src="/images/logo2.png" class="logo">
     <ul>
-       <li><a href="/mainpage">Recipes</a></li>
-       <li><a href="/profile">Profile</a></li>
-       <li><a href="/create">Create</a></li>
+        <li><a href="/mainpage">Recipes</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/create">Create</a></li>
     </ul>
 </header>
-<section class="banner"></section>
+
 
 
 
 
 <div class="maincontainer">
-<h1>Hello {{currentUserInfo.userName}}</h1>
+    <h1>Hello {{currentUserInfo.userName}}</h1>
 
-<h2>Your Recipes</h2>
-
-{{#each user.recipesId}}
-<img src={{this.recipeImage}}>
-<h3><a href="/detailrecipe/{{this._id}}">{{this.nameRecipe}}</a></h3>
-{{/each}}
+    <h2>Your Recipes</h2>
 </div>
+{{#each user.recipesId}}
+<div class="bodymainpage">
+     
+    <div class="blog-post">
+
+    
+        <div class="blog-post_img">
+            <img src={{this.recipeImage}} alt="fotoreceta">
+        </div>
+        <div class="blog-spot_info">
+            <h1 class="blog-post_namerecipe">{{this.nameRecipe}}</a></h1>
+            <div class="blog-post_text">
+                <p>{{this.typeOfCuisine}}</p>
+                <p>{{this.dishType}}</p>
+                <p>{{this.preparationTime}}</p>
+                <p>{{this.cookingTime}}</p>
+            </div>
+               <a href="/detailrecipe/{{this._id}}"class="blog-post_btn">Read more</a>
 
 
-<script type="text/javascript">
-window.addEventListener("scroll", function(){
-    var header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 0);})</script>
 
+
+            </div>
+
+            
+        </div>
+       
+    </div>
+ {{/each}}
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })</script>
