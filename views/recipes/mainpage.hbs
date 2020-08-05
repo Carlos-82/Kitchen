@@ -9,11 +9,11 @@
 <div class="maincontainer">
     <h1>Hello {{currentUserInfo.userName}}</h1>
     <h2>Your Recipes</h2>
-</div>{{#each user.recipesId}}
+
 <div class="bodymainpage">
-      
+     
     <div class="container">
-      
+      {{#each user.recipesId}} 
         <div class="card">
             <div class="imgBx">
                 <img src={{this.recipeImage}} alt="fotoreceta">
@@ -26,8 +26,8 @@
                 <p>{{this.cookingTime}}</p>
             <a href="/detailrecipe/{{this._id}}" class="recipesbtn">Read more</a>
             </div>
-        </div>
-    </div>{{/each}}
+        </div>{{/each}}
+    </div>
 </div>
 
 <script type="text/javascript">

@@ -143,7 +143,7 @@ header.sticky ul li a{
 }
 .container{
   position: relative;
-  width: 1100px;
+  
   display: flex;
   justify-content: center;
   align-items:center;
@@ -156,7 +156,7 @@ header.sticky ul li a{
   height:215px;
   background:#fff;
   margin: 30px 10px;
-  padding:20px 15px;
+  padding: 20px 15px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 5px 20px rgba(0,0,0,0.5);
@@ -166,16 +166,17 @@ header.sticky ul li a{
   height: 420px;
 }
 .container .card .imgBx{
-  position:relative;
+  position: relative;
   width:260px;
   height:260px;
   top: -60px;
-  left: 20px;
+ 
   z-index:1;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 .container .card .imgBx img{
 max-width:100%;
+height: 100%;
 border-radius:4px;
 }
 .container .card .content{
@@ -192,13 +193,13 @@ border-radius:4px;
   visibility: visible;
   opacity: 1;
   margin-top: -40px;
-  transition-delay:0.3s;
+  transition-delay: 0.3s;
 }
 .recipesbtn{
   text-decoration: none;
 }
 .maincontainer {
-  margin-top:75px;
+  margin-top:150px;
 text-align: center;
 }
 /*editrecipe*/
