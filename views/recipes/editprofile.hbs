@@ -1,5 +1,5 @@
 <header>
-<img src="/images/logo.png" class="logo">
+<img src="/images/logo2.png" class="logo">
     <ul>
         <li><a href="/mainpage">Recipes</a></li>
         <li><a href="/profile">Profile</a></li>
@@ -8,7 +8,7 @@
 </header>
 <section class="banner"></section>
 
-
+<div class="editprofilecontainer">
 <h1>Hello {{currentUserInfo.userName}}</h1>
 <h2>Formulario edición user</h2>
 <form action="/editprofile" method="post" enctype="multipart/form-data">
@@ -32,7 +32,7 @@
         <input type="file" name="userImage" id="userimage">
     </div>
     <button type="submit">Submit</button>
-</form>
+</form></div>
 
 
 <script type="text/javascript">

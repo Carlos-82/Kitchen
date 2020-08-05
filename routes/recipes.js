@@ -110,6 +110,8 @@ recipesRouter.get("/detailrecipe/:recipeId/editrecipe", (req, res, next) => {
 
 recipesRouter.post("/detailrecipe/:recipeId/editrecipe", parser.single("foodimage"), (req, res, next) => {
     const recipeId = req.params.recipeId;
+    let imageURL 
+    if(req.file)imageURL = req.file.secure_url
     const editedRecipe = {
         nameRecipe: req.body.nameRecipe,
         typeOfCuisine: req.body.typeOfCuisine,
@@ -122,7 +124,7 @@ recipesRouter.post("/detailrecipe/:recipeId/editrecipe", parser.single("foodimag
         method: req.body.method,
         linkToTheOriginalRecipe: req.body.linkToTheOriginalRecipe,
         notes: req.body.notes,
-        recipeImage: req.file.secure_url,
+        recipeImage: imageURL,
         userId: req.session.currentUser._id
     };
     Recipe.findByIdAndUpdate(recipeId, editedRecipe, {
@@ -146,7 +148,7 @@ recipesRouter.get("/detailrecipe/:recipeId/delete", (req, res, next) => {
         .then(recipe => console.log("The following Personal challenge has been deleted: " + recipe))
         .catch(err => console.log("error while finding and deleting the personal challenge: " + err))
 
-    console.log("previusly user: " + req.session.currentUser)
+    console.log("previously user: " + req.session.currentUser)
 
     User.findByIdAndUpdate({
             "_id": req.session.currentUser._id

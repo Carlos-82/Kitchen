@@ -1,5 +1,5 @@
 <header>
-    <img src="/images/logo.png" class="logo">
+    <img src="/images/logo2.png" class="logo">
     <ul>
         <li><a href="/mainpage">Recipes</a></li>
         <li><a href="/profile">Profile</a></li>
@@ -8,16 +8,14 @@
 </header>
 <section class="banner"></section>
 
-
+<div class="profilecontainer">
 hello {{currentUserInfo.userName}}
-
 <div>
     <img src={{currentUserInfo.userImage}} alt="">
     <h3>Nick Name: {{currentUserInfo.userName}}</h3>
     <p>name: {{currentUserInfo.name}}</p>
     <p>email: {{currentUserInfo.email}}</p>
     <p>About Me: {{currentUserInfo.aboutMe}}</p>
-
 </div>
 
 <form action="editprofile">
@@ -26,7 +24,7 @@ hello {{currentUserInfo.userName}}
 
 <form action="/">
     <button class="button-profile">LogOut</button>
-</form>
+</form></div>
 
 
 
