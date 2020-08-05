@@ -155,7 +155,7 @@ recipesRouter.get("/detailrecipe/:recipeId/delete", (req, res, next) => {
                 recipesId: recipeId
             }
         })
-        .then(() => res.render("recipes/mainpage"))
+        .then(() => res.redirect("/mainpage"))
         .catch(err => console.log("error while deleting a personal challenge from DB: " + err))
 })
 
