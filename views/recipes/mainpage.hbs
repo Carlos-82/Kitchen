@@ -1,11 +1,7 @@
-<form action="/create">
-    <button class="yellow-button">Create Recipe</button>
-</form>
-<form action="/profile">
-    <button class="yellow-button">Profile</button>
-</form>
+
+
 <header>
-    <img src="/images/logo.png" class="logo">
+    <img src="/images/logo2.png" class="logo">
     <ul>
        <li><a href="/mainpage">Recipes</a></li>
        <li><a href="/profile">Profile</a></li>
@@ -17,14 +13,16 @@
 
 
 
-
+<div class="maincontainer">
 <h1>Hello {{currentUserInfo.userName}}</h1>
 
 <h2>Your Recipes</h2>
 
 {{#each user.recipesId}}
+<img src={{this.recipeImage}}>
 <h3><a href="/detailrecipe/{{this._id}}">{{this.nameRecipe}}</a></h3>
 {{/each}}
+</div>
 
 
 <script type="text/javascript">
