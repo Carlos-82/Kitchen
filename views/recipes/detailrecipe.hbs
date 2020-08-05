@@ -9,24 +9,24 @@
 <section class="banner"></section>
 
 <div class="detailcontainer">
-<h1>Hello {{currentUserInfo.userName}}</h1>
+    <h1>Hello {{currentUserInfo.userName}}</h1>
 
-<h2>Detail recipe</h2>
-<img src={{recipe.recipeImage}}></img>
-<h3>{{recipe.nameRecipe}}</h3>
-<h3>{{recipe.typeOfCuisine}}</h3>
-<h3>{{recipe.dishType}}</h3>
-<h3>{{recipe.difficultyLevel}}</h3>
-<h3>{{recipe.numberofportions}}</h3>
-<h3>{{recipe.preparationTime}}</h3>
-<h3>{{recipe.cookingTime}}</h3>
-<h3>{{recipe.ingredients}}</h3>
-<h3>{{recipe.method}}</h3>
-<h3>{{recipe.linkToTheOriginalRecipe}}</h3>
-<h3>{{recipe.notes}}</h3>
+    <h2>Detail recipe</h2>
+    <img src={{recipe.recipeImage}}></img>
+    <h3>{{recipe.nameRecipe}}</h3>
+    <h3>{{recipe.typeOfCuisine}}</h3>
+    <h3>{{recipe.dishType}}</h3>
+    <h3>{{recipe.difficultyLevel}}</h3>
+    <h3>{{recipe.numberofportions}}</h3>
+    <h3>{{recipe.preparationTime}}</h3>
+    <h3>{{recipe.cookingTime}}</h3>
+    <h3>{{recipe.ingredients}}</h3>
+    <h3>{{recipe.method}}</h3>
+    <h3>{{recipe.linkToTheOriginalRecipe}}</h3>
+    <h3>{{recipe.notes}}</h3>
 
-<button><a href="/mainpage">Edit recipe</a></button>
-<button type="submit"><a href="/detailrecipe/{{recipe._id}}/delete">Delete recipe</a></button>
+    <button><a href="/detailrecipe/{{recipe._id}}/editrecipe">Edit recipe</a></button>
+    <button type="submit"><a href="/detailrecipe/{{recipe._id}}/delete">Delete recipe</a></button>
 </div>
 
 
