@@ -1,0 +1,41 @@
+<header>
+    <img src="/images/logo2.png" class="logo">
+    <ul>
+        <li><a href="/mainpage">Recipes</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/create">Create</a></li>
+    </ul>
+</header>
+<section class="banner"></section>
+
+<div class="profilecontainer">
+    <h2>hello {{currentUserInfo.userName}}</h2>
+    <div class="container">
+        <div class="card">
+            <div class="imgBx">
+                <img src={{currentUserInfo.userImage}} alt="profilepicture">
+            </div>
+            <div class="content">
+                <h3>Nick Name: {{currentUserInfo.userName}}</h3>
+                <p>name: {{currentUserInfo.name}}</p>
+                <p>email: {{currentUserInfo.email}}</p>
+                <p>About Me: {{currentUserInfo.aboutMe}}</p>
+
+                <form action="editprofile">
+                    <button class="button-profile">Edit Profile</button>
+                </form>
+                <form action="/">
+                    <button class="button-profile">LogOut</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })</script>

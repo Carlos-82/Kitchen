@@ -1,0 +1,89 @@
+<header>
+    <img src="/images/logo2.png" class="logo">
+    <ul>
+        <li><a href="/mainpage">Recipes</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/create">Create</a></li>
+    </ul>
+</header>
+<section class="banner"></section>
+<div class="createcontainer">
+
+    {{#each user.recipe}}
+    <h3>{{recipe.name}}</h3>
+    {{/each}}
+    <div class="contact-form createform">
+        <h1>Create your recipe</h1>
+        <form action="/create" method="post" enctype="multipart/form-data">
+            <div class="txtb">
+                <label for="nameRecipe">Name of the recipe</label>
+                <input type="text" name="nameRecipe" id="nameRecipe" placeholder="">
+            </div>
+            <div class="txtb">
+                <label for="typeOfCuisine"> Type of cuisine </label>
+                <input type="text" name="typeOfCuisine" id="typeOfCuisine" placeholder="Asian cuisine">
+            </div>
+            <div class="txtb">
+                <label for="dishType">Type of dish</label>
+                <select class="txtb" id="dishType" name="dishType" size="1">
+                    <option value="breakfast">breakfast</option>
+                    <option value="main course">main course</option>
+                    <option value="side dish">side dish</option>
+                    <option value="drink">drink</option>
+                    <option value="dessert">dessert</option>
+                    <option value="appetizer">appetizer</option>
+                    <option value="other">other</option>
+                </select>
+            </div>
+            <div class="txtb">
+                <label for="difficultyLevel">Level of difficulty </label>
+                <input type="text" name="difficultyLevel" id="difficultyLevel" placeholder="level of difficulty">
+            </div>
+            <div class="txtb">
+                <label for="numberofportions"> Number of portions </label>
+                <input type="number" name="numberofportions" id="numberofportions" min="1" max="10" placeholder="">
+            </div>
+            <div class="txtb">
+                <label for="preparationTime"> Preparation time </label>
+                <input type="text" name="preparationTime" id="preparationTime" placeholder="">
+            </div>
+            <div class="txtb">
+                <label for="cookingTime"> Cooking time </label>
+                <input type="text" name="cookingTime" id="cookingTime" placeholder="">
+            </div>
+            <div class="txtb">
+                <label for="linktotheoriginalrecipe"> Link to the original recipe</label>
+                <input type="url" name="linktotheoriginalrecipe" id="linktotheoriginalrecipe">
+            </div>
+    </div><br>
+    <div class="contact-form createform2">
+        <div class="txtb">
+            <label for="ingredients"> Ingredients</label>
+            <input type="text" name="ingredients" id="ingredients">
+            <textarea></textarea>
+        </div>
+        <div class="txtb">
+            <label for="method"> Method</label>
+            <input type="text" name="method" id="method">
+        </div>
+    </div><br>
+    <div class="contact-form createform3">
+        <div class="txtb">
+            <label for="notes"> Notes</label>
+            <input type="text" name="notes" id="notes">
+            <textarea></textarea>
+        </div>
+        <div class="txtb">
+            <label for="Recipe image">Recipe image</label>
+            <input type="file" name="foodimage" id="foodimage">
+        </div>
+        <button class="formbtn" type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })</script>
