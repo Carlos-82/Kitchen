@@ -180,13 +180,13 @@ header.sticky ul li a {
 }
 
 .container .card:hover {
-  height: 420px;
+  height: 360px;
 }
 
 .container .card .imgBx {
   position: relative;
-  width: 260px;
-  height: 260px;
+  width: 200px;
+  height: 200px;
   top: -60px;
   border-radius: 16px;
   z-index: 1;
@@ -204,6 +204,7 @@ header.sticky ul li a {
   margin-top: -140px;
   padding: 10px 15px;
   text-align: center;
+  font-size: 14px;
   color: #111;
   visibility: hidden;
   opacity: 0;
@@ -370,5 +371,34 @@ header.sticky ul li a {
 
   header ul li {
     font-size: 20px;
+  }
+
+  .bodymainpage {
+    margin-top: 20px
+  }
+
+  .container .card {
+    height: 300px;
+  }
+
+  .container .card:hover {
+    height: 420px;
+  }
+
+  .container .card .imgBx {
+    width: 260px;
+    height: 260px;
+  }
+
+  .container .card .content {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1240px) {
+
+  .container {
+    width: 1200px;
+
   }
 }
