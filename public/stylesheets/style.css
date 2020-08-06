@@ -4,16 +4,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cookie', cursive;
 }
 
 body {
   background: #fcdfbf;
-
-
-
 }
-
 a {
   color: #00B7FF;
 }
@@ -70,6 +66,7 @@ header ul li a {
   letter-spacing: 2px;
   font-weight: 500px;
   transition: 0.2s;
+  font-size: 16px;
 }
 
 .banner {
@@ -91,6 +88,7 @@ header.sticky ul li a {
 /*Slider index.hbs*/
 #slider {
   overflow: hidden;
+  margin-top:80px;
 }
 
 #slider figure {
@@ -121,26 +119,29 @@ header.sticky ul li a {
     left: -100%;
   }
 
-  45% {
+  40% {
     left: -100%;
   }
 
-  50% {
+  45% {
+    left: -200%;
+  }
+
+  65% {
     left: -200%;
   }
 
   70% {
-    left: -200%;
-  }
-
-  75% {
     left: -300%;
   }
 
-  95% {
+  85% {
     left: -300%;
   }
 
+  90% {
+    left: -400%;
+  }
   100% {
     left: -400%;
   }
@@ -473,6 +474,15 @@ header.sticky ul li a {
   header ul li {
     font-size: 20px;
   }
+
+  header ul li a {
+    font-size: 30px;
+  }
+  #slider {
+  
+    margin-top:150px;
+  }
+    
 
   .bodymainpage {
     margin-top: 20px
