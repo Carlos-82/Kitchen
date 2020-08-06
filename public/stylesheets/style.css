@@ -353,7 +353,6 @@ header.sticky ul li a {
 }
 
 
-<<<<<<< HEAD
 /*Profile*/
 
 .hello {
@@ -429,9 +428,6 @@ header.sticky ul li a {
   background-image: linear-gradient(to right, #DEEFED 0%, #628B8F 100%);
 }
 
-=======
-/*Profile form*/
->>>>>>> 81e3c3768c55dfa171cce5990e945bb5014e44d8
 .button-profile {
   background-color: #93BCC1;
   color: white;
@@ -440,9 +436,11 @@ header.sticky ul li a {
   font-size: 12px;
   margin-bottom: 10px;
 }
-.editprofilecontainer{
+
+.editprofilecontainer {
   margin-top: 10rem;
 }
+
 .profileform {
   margin-top: 10px;
   position: relative;
