@@ -10,28 +10,30 @@
 
 <div class="editprofilecontainer">
 <h1>Hello {{currentUserInfo.userName}}</h1>
-<h2>Formulario edición user</h2>
+<div class="contact-form">
+<h2>Change your profile</h2>
 <form action="/editprofile" method="post" enctype="multipart/form-data">
-    <div>
+    <div class="txtb">
         <label for="userName">UserName</label>
         <input type="text" name="userName" id="username" value="{{currentUserInfo.userName}}">
     </div>
-    <div>
+    <div class="txtb">
         <label for="name">Your name</label>
         <input type="text" name="name" id="realname" value="{{currentUserInfo.name}}">
-    </div>
+    </div><div class="txtb">
     <label for="email">Your email</label>
     <input type="text" name="email" id="useremail" value="{{currentUserInfo.email}}">
     </div>
-    <div>
+    <div class="txtb">
         <label for="aboutMe"> About me</label>
         <input type="text" name="aboutMe" id="aboutMe" value="{{currentUserInfo.aboutMe}}">
+    <textarea></textarea>
     </div>
-    <div>
+    <div class="txtb">
         <label for="userimage">User profile picture</label>
         <input type="file" name="userImage" id="userimage">
     </div>
-    <button type="submit">Submit</button>
+    <button type="submit" class="formbtn">Submit</button>
 </form></div>
 
 

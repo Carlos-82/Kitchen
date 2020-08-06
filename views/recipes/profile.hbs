@@ -10,21 +10,23 @@
 
 <div class="profilecontainer">
 hello {{currentUserInfo.userName}}
-<div>
-    <img src={{currentUserInfo.userImage}} alt="">
+<div class="container">
+<div class="card">
+    <div class="imgBx">
+    <img src={{currentUserInfo.userImage}} alt="profilepicture">
+    </div>
+    <div class="content">
     <h3>Nick Name: {{currentUserInfo.userName}}</h3>
     <p>name: {{currentUserInfo.name}}</p>
     <p>email: {{currentUserInfo.email}}</p>
     <p>About Me: {{currentUserInfo.aboutMe}}</p>
-</div>
 
 <form action="editprofile">
     <button class="button-profile">Edit Profile</button>
 </form>
-
 <form action="/">
     <button class="button-profile">LogOut</button>
-</form></div>
+</form></div></div></div></div>
 
 
 

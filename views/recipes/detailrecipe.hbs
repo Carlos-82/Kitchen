@@ -7,13 +7,15 @@
     </ul>
 </header>
 <section class="banner"></section>
-
+<div class="detailbody">
 <div class="detailcontainer">
     <h1>Hello {{currentUserInfo.userName}}</h1>
-
     <h2>Detail recipe</h2>
-    <img src={{recipe.recipeImage}}></img>
-    <h3>{{recipe.nameRecipe}}</h3>
+    <div class="blog-post">
+    <div class="blog-post_img">
+    <img src={{recipe.recipeImage}}></img></div>
+    <h3 class="blog-post_title">{{recipe.nameRecipe}}</h3>
+    <div class="blog-post_text">
     <h3>{{recipe.typeOfCuisine}}</h3>
     <h3>{{recipe.dishType}}</h3>
     <h3>{{recipe.difficultyLevel}}</h3>
@@ -24,10 +26,11 @@
     <h3>{{recipe.method}}</h3>
     <h3>{{recipe.linkToTheOriginalRecipe}}</h3>
     <h3>{{recipe.notes}}</h3>
+    </div>
 
-    <button><a href="/detailrecipe/{{recipe._id}}/editrecipe">Edit recipe</a></button>
-    <button type="submit"><a href="/detailrecipe/{{recipe._id}}/delete">Delete recipe</a></button>
-</div>
+    <button><a href="/detailrecipe/{{recipe._id}}/editrecipe" class="blog-post_cta">Edit recipe</a></button>
+    <button type="submit"><a href="/detailrecipe/{{recipe._id}}/delete" class="blog-post_cta">Delete recipe</a></button>
+</div></div></div></div></div>
 
 
 <script type="text/javascript">

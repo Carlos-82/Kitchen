@@ -161,6 +161,7 @@ header.sticky ul li a{
   flex-direction: column;
   box-shadow: 0 5px 20px rgba(0,0,0,0.5);
   transition: 0.3s ease-in-out;
+  border-radius: 16px;
 }
 .container .card:hover{
   height: 420px;
@@ -170,14 +171,14 @@ header.sticky ul li a{
   width:260px;
   height:260px;
   top: -60px;
- 
+ border-radius:16px;
   z-index:1;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 .container .card .imgBx img{
 max-width:100%;
 height: 100%;
-border-radius:4px;
+border-radius:16px;
 }
 .container .card .content{
   position: relative;
@@ -202,25 +203,7 @@ border-radius:4px;
   margin-top:150px;
 text-align: center;
 }
-@media (max-width: 320px) {
-  .bodymainpage{
-    width:320px;
-  }
-  .container{
-  width: 320px;
-  height:320px;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-  flex-direction: column;
-  }
-  .container .card{
-    display: flex;
-    flex-direction: column;
-    width:400px;
-    height:400px;
-}
-}
+
 /*editrecipe*/
 .editcontainer{
   margin-top:50px;
@@ -246,6 +229,96 @@ text-align: center;
   margin-top:50px;
   padding: 200px;
 }
+/*create*/
+.createcontainer{
+  margin-top:50px;
+  padding: 200px;
+}
+/*login form*/
+.contact-form{
+  width: 85%;
+  max-width: 600px;
+  background: #f1f1f1;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  padding:30px 40px;
+  box-sizing:border-box;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 20px #000000b3;
+  }
+  .contact-form h2{
+    margin-top:0;
+    font-weight: 200;
+ }
+ .txtb{
+   border: 1px solid gray;
+   margin: 8px 0;
+   padding:12px 18px;
+   border-radius: 16px;
+ }
+ .txtb label{
+   display:block;
+   text-align:left;
+   color:#333;
+   text-transform:uppercase;
+   font-size:14px;
+ }
+ .txtb input, .txtb textarea {
+   width: 100%;
+   border:none;
+   background:none;
+   outline:none;
+   font-size:18px;
+   margin-top:6px;
+   border-radius: 16px;
+ }
+ .formbtn {
+   display: inline-block;
+   background: #93BCC1;
+   padding: 7px 0;
+   color:white;
+   text-transform:uppercase;
+   cursor: pointer;
+   margin-top: 8px;
+   width:60%;
+   border-radius:16px;
+ }
+ .formlink{
+   text-transform:uppercase;
+   cursor: pointer;
+   margin-top: 8px;
+   text-decoration: none;
+ }
+ /*Create form*/
+ .createform{
+  width: 85%;
+  max-width: 600px;
+  background: #f1f1f1;
+  position: relative;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  padding:30px 40px;
+  box-sizing:border-box;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 20px #000000b3;
+  border-radius:16px;
+  }
 
-
-
+  .createform2{
+ margin-top: 200px;
+}
+.createform3{
+  margin-top:300px;
+}
+/*Profile*/
+.button-profile{
+  background-color:#93BCC1;
+  color:white;
+  text-decoration:none;
+  border-radius:16px;
+}
