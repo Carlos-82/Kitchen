@@ -247,11 +247,7 @@ header.sticky ul li a {
   padding: 200px;
 }
 
-/*editprofile*/
-.editprofilecontainer {
-  margin-top: 50px;
-  padding: 200px;
-}
+
 
 /*detailrecipe*/
 .detailcontainer {
@@ -357,14 +353,16 @@ header.sticky ul li a {
 }
 
 
-/*Profile*/
+/*Profile form*/
 .button-profile {
   background-color: #93BCC1;
   color: white;
   text-decoration: none;
   border-radius: 16px;
 }
-
+.editprofilecontainer{
+  margin-top: 10rem;
+}
 .profileform {
   position: relative;
 }

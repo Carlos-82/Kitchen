@@ -6,14 +6,12 @@
         <li><a href="/create">Create</a></li>
     </ul>
 </header>
-<section class="banner"></section>
 
-<div class="editprofilecontainer">
+
+<div class="createcontainer">
 <h1>Hello {{currentUserInfo.userName}}</h1>
-<div class="contact-form profileform">
-<h1>Change your profile</h1>
-<form action="/editprofile" method="post" enctype="multipart/form-data">
-    <div class="txtb">
+<form class="form-create" action="/editprofile" method="post" enctype="multipart/form-data">
+    <div class="create-form"><h1>Change your profile</h1> <div class="txtb"> 
         <label for="userName">UserName</label>
         <input type="text" name="userName" id="username" value="{{currentUserInfo.userName}}">
     </div>
@@ -33,8 +31,8 @@
         <label for="userimage">User profile picture</label>
         <input type="file" name="userImage" id="userimage">
     </div>
-    <button type="submit" class="formbtn">Submit</button>
-</form></div>
+    <button class="formbtn" type="submit" class="formbtn">Submit</button>
+</form></div></div>
 
 
 <script type="text/javascript">
