@@ -6,15 +6,15 @@
         <li><a href="/create">Create</a></li>
     </ul>
 </header>
-<section class="banner"></section>
 <div class="createcontainer">
 
     {{#each user.recipe}}
     <h3>{{recipe.name}}</h3>
     {{/each}}
-    <div class="contact-form createform">
-        <h1>Create your recipe</h1>
-        <form action="/create" method="post" enctype="multipart/form-data">
+    <form class="form-create" action="/create" method="post" enctype="multipart/form-data">
+        <div class="create-form">
+            <h1>Create your recipe</h1>
+
             <div class="txtb">
                 <label for="nameRecipe">Name of the recipe</label>
                 <input type="text" name="nameRecipe" id="nameRecipe" placeholder="">
@@ -55,35 +55,48 @@
                 <label for="linktotheoriginalrecipe"> Link to the original recipe</label>
                 <input type="url" name="linktotheoriginalrecipe" id="linktotheoriginalrecipe">
             </div>
-    </div>
-    <div class="contact-form createform2">
-        <div class="txtb">
-            <label for="ingredients"> Ingredients</label>
-            <input type="text" name="ingredients" id="ingredients">
-            <textarea></textarea>
         </div>
-        <div class="txtb">
-            <label for="method"> Method</label>
-            <input type="text" name="method" id="method">
+        <div class="create-form createform2">
+            <div class="txtb">
+                <label for="ingredients"> Ingredients</label>
+                <input type="text" name="ingredients" id="ingredients">
+                <textarea name="method" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="txtb">
+                <label for="method"> Method</label>
+                <input type="text" name="method" id="method">
+                <textarea name="method" id="" cols="30" rows="10"></textarea>
+            </div>
+        </div><br>
+        <div class="create-form createform3">
+            <div class="txtb">
+                <label for="notes"> Notes</label>
+                <input type="text" name="notes" id="notes">
+                <textarea name="method" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="txtb">
+                <label for="Recipe image">Recipe image</label>
+                <input class="upimage" type="file" name="foodimage" id="foodimage">
+            </div>
+            <button class="formbtn" type="submit">Submit</button>
+
         </div>
-    </div><br>
-    <div class="contact-form createform3">
-        <div class="txtb">
-            <label for="notes"> Notes</label>
-            <input type="text" name="notes" id="notes">
-            <textarea></textarea>
-        </div>
-        <div class="txtb">
-            <label for="Recipe image">Recipe image</label>
-            <input type="file" name="foodimage" id="foodimage">
-        </div>
-        <button class="formbtn" type="submit">Submit</button>
-        </form>
-    </div>
+    </form>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('input[type=text]').forEach(node => node.addEventListener('keypress', e => {
+            if (e.keyCode == 13) {
+                e.preventDefault();
+            }
+        }))
+    });
+</script>
 
 
-    <script type="text/javascript">
-        window.addEventListener("scroll", function () {
-            var header = document.querySelector("header");
-            header.classList.toggle("sticky", window.scrollY > 0);
-        })</script>
+<script type="text/javascript">
+    window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })</script>

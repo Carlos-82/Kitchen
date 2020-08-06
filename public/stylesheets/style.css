@@ -239,11 +239,7 @@ header.sticky ul li a {
 
 }
 
-/*createrecipe*/
-.createcontainer {
-  margin-top: 50px;
-  padding: 200px;
-}
+
 
 /*profile*/
 .profilecontainer {
@@ -263,11 +259,6 @@ header.sticky ul li a {
   padding: 200px;
 }
 
-/*create*/
-.createcontainer {
-  margin-top: 50px;
-  padding: 200px;
-}
 
 /*FORMULARIO GENERAL*/
 .contact-form {
@@ -332,19 +323,28 @@ header.sticky ul li a {
 }
 
 /*Create form*/
-.createform {
-  width: 85%;
+
+.createcontainer {
+  margin-top: 10rem;
+}
+
+.form-create {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-form {
+  width: 75%;
   max-width: 600px;
   background: #f1f1f1;
   position: relative;
-  top: 50%;
-  left: 50%;
   padding: 30px 40px;
   box-sizing: border-box;
+  border-radius: 16px;
   text-align: center;
   box-shadow: 0 0 20px #000000b3;
-  border-radius: 16px;
-  margin-top: 25rem;
 }
 
 .createform2 {
@@ -353,8 +353,9 @@ header.sticky ul li a {
 
 .createform3 {
   margin-top: 1rem;
-  margin-bottom: 0.05rem;
+  margin-bottom: 1rem;
 }
+
 
 /*Profile*/
 .button-profile {
@@ -431,11 +432,23 @@ header.sticky ul li a {
 
 }
 
+.create-form {
+  width: 100%;
+}
+
+
 @media (min-width: 1240px) {
 
   .container {
     width: 1200px;
 
+  }
+
+  .form-create {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
 }
