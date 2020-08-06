@@ -6,22 +6,24 @@
         <li><a href="/create">Create</a></li>
     </ul>
 </header>
-<section class="banner"></section>
 
-<div class="profilecontainer">
+<div class="hello">
     <h2>hello {{currentUserInfo.userName}}</h2>
-    <div class="container">
-        <div class="card">
-            <div class="imgBx">
-                <img src={{currentUserInfo.userImage}} alt="profilepicture">
-            </div>
-            <div class="content">
-                <h3>Nick Name: {{currentUserInfo.userName}}</h3>
+</div>
+
+<div class="bodyprofile">
+    <div class="containerprofile">
+        <div class="profileimage">
+            <img src={{currentUserInfo.userImage}} alt="profilepicture">
+        </div>
+        <div class="contentprofile">
+            <h3 class="nickname">Nick Name: {{currentUserInfo.userName}}</h3>
+            <div class="profiletext">
                 <p>name: {{currentUserInfo.name}}</p>
                 <p>email: {{currentUserInfo.email}}</p>
                 <p>About Me: {{currentUserInfo.aboutMe}}</p>
 
-                <form action="editprofile">
+                <form class="profileform" action="editprofile">
                     <button class="button-profile">Edit Profile</button>
                 </form>
                 <form action="/">
@@ -30,6 +32,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 
 

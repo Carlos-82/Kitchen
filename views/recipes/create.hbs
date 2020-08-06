@@ -11,7 +11,7 @@
     {{#each user.recipe}}
     <h3>{{recipe.name}}</h3>
     {{/each}}
-    <form class="form-create" action="/create" method="post" enctype="multipart/form-data">
+    <form class="form-create" action="/create" method="POST" enctype="multipart/form-data">
         <div class="create-form">
             <h1>Create your recipe</h1>
 
@@ -60,19 +60,19 @@
             <div class="txtb">
                 <label for="ingredients"> Ingredients</label>
                 <input type="text" name="ingredients" id="ingredients">
-                <textarea name="method" id="" cols="30" rows="10"></textarea>
+                <textarea id="" cols="30" rows="10"></textarea>
             </div>
             <div class="txtb">
                 <label for="method"> Method</label>
                 <input type="text" name="method" id="method">
-                <textarea name="method" id="" cols="30" rows="10"></textarea>
+                <textarea id="" cols="30" rows="10"></textarea>
             </div>
         </div><br>
         <div class="create-form createform3">
             <div class="txtb">
                 <label for="notes"> Notes</label>
                 <input type="text" name="notes" id="notes">
-                <textarea name="method" id="" cols="30" rows="10"></textarea>
+                <textarea id="" cols="30" rows="10"></textarea>
             </div>
             <div class="txtb">
                 <label for="Recipe image">Recipe image</label>
@@ -83,16 +83,6 @@
         </div>
     </form>
 </div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('input[type=text]').forEach(node => node.addEventListener('keypress', e => {
-            if (e.keyCode == 13) {
-                e.preventDefault();
-            }
-        }))
-    });
-</script>
 
 
 <script type="text/javascript">

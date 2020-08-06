@@ -110,8 +110,8 @@ recipesRouter.get("/detailrecipe/:recipeId/editrecipe", (req, res, next) => {
 
 recipesRouter.post("/detailrecipe/:recipeId/editrecipe", parser.single("foodimage"), (req, res, next) => {
     const recipeId = req.params.recipeId;
-    let imageURL 
-    if(req.file)imageURL = req.file.secure_url
+    let imageURL
+    if (req.file) imageURL = req.file.secure_url
     const editedRecipe = {
         nameRecipe: req.body.nameRecipe,
         typeOfCuisine: req.body.typeOfCuisine,
