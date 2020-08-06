@@ -207,8 +207,14 @@ text-align: center;
 /*editrecipe*/
 .editcontainer{
   margin-top:50px;
-  padding: 200px;
+
 }
+/*editrecipeform*/
+.editrecipeformcontainer{
+  margin-top:50px;
+  
+}
+
 /*createrecipe*/
 .createcontainer{
   margin-top:50px;
@@ -221,7 +227,7 @@ text-align: center;
 }
 /*editprofile*/
 .editprofilecontainer{
-  margin-top:50px;
+  margin-top:100px;
   padding: 200px;
 }
 /*detailrecipe*/
@@ -236,10 +242,10 @@ text-align: center;
 }
 /*login form*/
 .contact-form{
-  width: 85%;
+  width: 100%;
   max-width: 600px;
   background: #f1f1f1;
-  position: absolute;
+  position: relative;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
@@ -248,12 +254,9 @@ text-align: center;
   border-radius: 16px;
   text-align: center;
   box-shadow: 0 0 20px #000000b3;
+  margin-top: 25rem;
   }
-  .contact-form h2{
-    margin-top:0;
-    font-weight: 200;
- }
- .txtb{
+.txtb{
    border: 1px solid gray;
    margin: 8px 0;
    padding:12px 18px;
@@ -300,20 +303,20 @@ text-align: center;
   position: relative;
   top:50%;
   left:50%;
-  transform: translate(-50%,-50%);
   padding:30px 40px;
   box-sizing:border-box;
-  border-radius: 8px;
+  border-radius: 8px;  
   text-align: center;
   box-shadow: 0 0 20px #000000b3;
   border-radius:16px;
-  }
-
-  .createform2{
- margin-top: 200px;
+  margin-top: 25rem;
+}
+.createform2{
+ margin-top: 1rem;
 }
 .createform3{
-  margin-top:300px;
+  margin-top:1rem;
+  margin-bottom: 0.05rem;
 }
 /*Profile*/
 .button-profile{
@@ -321,4 +324,14 @@ text-align: center;
   color:white;
   text-decoration:none;
   border-radius:16px;
+}
+.profileform{
+  position: relative;
+}
+.loginform{
+  margin-top:25rem;
+}
+.editrecipeform{
+margin-top:40rem;
+position:relative;
 }
