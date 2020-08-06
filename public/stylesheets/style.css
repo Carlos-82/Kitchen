@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Cookie', cursive;
 }
 
 body {
@@ -91,6 +91,8 @@ header.sticky ul li a {
 /*Slider index.hbs*/
 #slider {
   overflow: hidden;
+  margin-top: 85px;
+  height:100vh;
 }
 
 #slider figure {
@@ -99,12 +101,14 @@ header.sticky ul li a {
   margin: 0;
   left: 0;
   animation: 20s slider infinite;
+  
 }
 
 #slider figure img {
   width: 20%;
   float: left;
   max-width: 20%;
+ 
 }
 
 @keyframes slider {
@@ -366,16 +370,12 @@ header.sticky ul li a {
 .profileform {
   position: relative;
 }
-
 /*login*/
 .loginform {
   margin-top: 20rem;
   width: 75%;
   font-size: 14px;
 }
-
-
-
 .editrecipeform {
   margin-top: 40rem;
   position: relative;
@@ -448,5 +448,8 @@ header.sticky ul li a {
     flex-direction: column;
     align-items: center;
   }
-
+.mainindex{
+  width:50px;
+  height: 130px;
+}
 }
