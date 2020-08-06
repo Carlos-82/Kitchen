@@ -6,48 +6,32 @@
         <li><a href="/create">Create</a></li>
     </ul>
 </header>
-
-
-
-
-
 <div class="maincontainer">
     <h1>Hello {{currentUserInfo.userName}}</h1>
-
     <h2>Your Recipes</h2>
-</div>
-{{#each user.recipesId}}
+
 <div class="bodymainpage">
      
-    <div class="blog-post">
-
-    
-        <div class="blog-post_img">
-            <img src={{this.recipeImage}} alt="fotoreceta">
-        </div>
-        <div class="blog-spot_info">
-            <h1 class="blog-post_namerecipe">{{this.nameRecipe}}</a></h1>
-            <div class="blog-post_text">
+    <div class="container">
+      {{#each user.recipesId}} 
+        <div class="card">
+            <div class="imgBx">
+                <img src={{this.recipeImage}} alt="fotoreceta">
+            </div>
+            <div class="content">
+                <h2>{{this.nameRecipe}}</h2>
                 <p>{{this.typeOfCuisine}}</p>
                 <p>{{this.dishType}}</p>
                 <p>{{this.preparationTime}}</p>
                 <p>{{this.cookingTime}}</p>
+            <a href="/detailrecipe/{{this._id}}" class="recipesbtn">Read more</a>
             </div>
-               <a href="/detailrecipe/{{this._id}}"class="blog-post_btn">Read more</a>
-
-
-
-
-            </div>
-
-            
-        </div>
-       
+        </div>{{/each}}
     </div>
- {{/each}}
+</div>
 
-    <script type="text/javascript">
-        window.addEventListener("scroll", function () {
-            var header = document.querySelector("header");
-            header.classList.toggle("sticky", window.scrollY > 0);
-        })</script>
+<script type="text/javascript">
+    window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })</script>
