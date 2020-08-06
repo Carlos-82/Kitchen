@@ -1,5 +1,5 @@
 <header>
-<img src="/images/logo2.png" class="logo">
+    <img src="/images/logo2.png" class="logo">
     <ul>
         <li><a href="/mainpage">Recipes</a></li>
         <li><a href="/profile">Profile</a></li>
@@ -9,30 +9,35 @@
 
 
 <div class="createcontainer">
-<h1>Hello {{currentUserInfo.userName}}</h1>
-<form class="form-create" action="/editprofile" method="post" enctype="multipart/form-data">
-    <div class="create-form"><h1>Change your profile</h1> <div class="txtb"> 
-        <label for="userName">UserName</label>
-        <input type="text" name="userName" id="username" value="{{currentUserInfo.userName}}">
-    </div>
-    <div class="txtb">
-        <label for="name">Your name</label>
-        <input type="text" name="name" id="realname" value="{{currentUserInfo.name}}">
-    </div><div class="txtb">
-    <label for="email">Your email</label>
-    <input type="text" name="email" id="useremail" value="{{currentUserInfo.email}}">
-    </div>
-    <div class="txtb">
-        <label for="aboutMe"> About me</label>
-        <input type="text" name="aboutMe" id="aboutMe" value="{{currentUserInfo.aboutMe}}">
-    <textarea></textarea>
-    </div>
-    <div class="txtb">
-        <label for="userimage">User profile picture</label>
-        <input type="file" name="userImage" id="userimage">
-    </div>
-    <button class="formbtn" type="submit" class="formbtn">Submit</button>
-</form></div></div>
+    <h1>Hello {{currentUserInfo.userName}}</h1>
+    <form class="form-create" action="/editprofile" method="post" enctype="multipart/form-data">
+        <div class="create-form">
+            <h1>Change your profile</h1>
+            <div class="txtb">
+                <label for="userName">UserName</label>
+                <input type="text" name="userName" id="username" value="{{currentUserInfo.userName}}">
+            </div>
+            <div class="txtb">
+                <label for="name">Your name</label>
+                <input type="text" name="name" id="realname" value="{{currentUserInfo.name}}">
+            </div>
+            <div class="txtb">
+                <label for="email">Your email</label>
+                <input type="text" name="email" id="useremail" value="{{currentUserInfo.email}}">
+            </div>
+            <div class="txtb">
+                <label for="aboutMe"> About me</label>
+                <input type="text" name="aboutMe" id="aboutMe" value="{{currentUserInfo.aboutMe}}">
+                <textarea id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="txtb">
+                <label for="userimage">User profile picture</label>
+                <input type="file" name="userImage" id="userimage">
+            </div>
+            <button class="formbtn" type="submit" class="formbtn">Submit</button>
+    </form>
+</div>
+</div>
 
 
 <script type="text/javascript">
