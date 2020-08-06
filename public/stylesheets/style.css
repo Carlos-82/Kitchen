@@ -230,7 +230,13 @@ header.sticky ul li a {
 /*editrecipe*/
 .editcontainer {
   margin-top: 50px;
-  padding: 200px;
+
+}
+
+/*editrecipeform*/
+.editrecipeformcontainer {
+  margin-top: 50px;
+
 }
 
 /*createrecipe*/
@@ -263,12 +269,12 @@ header.sticky ul li a {
   padding: 200px;
 }
 
-/*login form*/
+/*FORMULARIO GENERAL*/
 .contact-form {
-  width: 85%;
+  width: 100%;
   max-width: 600px;
   background: #f1f1f1;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -277,11 +283,7 @@ header.sticky ul li a {
   border-radius: 16px;
   text-align: center;
   box-shadow: 0 0 20px #000000b3;
-}
-
-.contact-form h2 {
-  margin-top: 0;
-  font-weight: 200;
+  margin-top: 25rem;
 }
 
 .txtb {
@@ -305,7 +307,7 @@ header.sticky ul li a {
   border: none;
   background: none;
   outline: none;
-  font-size: 18px;
+  font-size: 12px;
   margin-top: 6px;
   border-radius: 16px;
 }
@@ -337,21 +339,21 @@ header.sticky ul li a {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   padding: 30px 40px;
   box-sizing: border-box;
-  border-radius: 8px;
   text-align: center;
   box-shadow: 0 0 20px #000000b3;
   border-radius: 16px;
+  margin-top: 25rem;
 }
 
 .createform2 {
-  margin-top: 200px;
+  margin-top: 1rem;
 }
 
 .createform3 {
-  margin-top: 300px;
+  margin-top: 1rem;
+  margin-bottom: 0.05rem;
 }
 
 /*Profile*/
@@ -360,6 +362,24 @@ header.sticky ul li a {
   color: white;
   text-decoration: none;
   border-radius: 16px;
+}
+
+.profileform {
+  position: relative;
+}
+
+/*login*/
+.loginform {
+  margin-top: 20rem;
+  width: 75%;
+  font-size: 14px;
+}
+
+
+
+.editrecipeform {
+  margin-top: 40rem;
+  position: relative;
 }
 
 @media (min-width: 768px) {
@@ -393,6 +413,22 @@ header.sticky ul li a {
   .container .card .content {
     font-size: 16px;
   }
+
+  .loginform {
+    margin-top: 25rem;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .txtb label {
+    font-size: 18px;
+  }
+
+  .txtb input,
+  .txtb textarea {
+    font-size: 18px;
+  }
+
 }
 
 @media (min-width: 1240px) {
@@ -401,4 +437,5 @@ header.sticky ul li a {
     width: 1200px;
 
   }
+
 }
