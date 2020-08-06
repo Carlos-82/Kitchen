@@ -8,71 +8,77 @@
 </header>
 <section class="banner"></section>
 
-<div class="editrecipeformcontainer">
 
-<div class="contact-form editrecipeform">
+
+<div class="createcontainer">
     <h1>Edit your recipe</h1>
-    <form method="post" enctype="multipart/form-data">
-        <div class="txtb">
-            <label for="nameRecipe">Name of the recipe</label>
-            <input type="text" name="nameRecipe" id="nameRecipe" value={{recipe.nameRecipe}}>
+    <form class="form-create" method="post" enctype="multipart/form-data">
+        <div class="create-form">
+            <div class="txtb">
+                <label for="nameRecipe">Name of the recipe</label>
+                <input type="text" name="nameRecipe" id="nameRecipe" value={{recipe.nameRecipe}}>
+            </div>
+            <div class="txtb">
+                <label for="typeOfCuisine"> Type of cuisine </label>
+                <input type="text" name="typeOfCuisine" id="typeOfCuisine" value={{recipe.typeOfCuisine}}>
+            </div>
+            <div class="txtb">
+                <label for="dishType">Type of dish</label>
+                <select class="txtb" id="dishType" name="dishType" size="1">
+                    <option value="breakfast">breakfast</option>
+                    <option value="main course">main course</option>
+                    <option value="side dish">side dish</option>
+                    <option value="drink">drink</option>
+                    <option value="dessert">dessert</option>
+                    <option value="appetizer">appetizer</option>
+                    <option value="other">other</option>
+                </select>
+            </div>
+            <div class="txtb">
+                <label for="difficultyLevel">Level of difficulty </label>
+                <input type="text" name="difficultyLevel" id="difficultyLevel" value={{recipe.difficultyLevel}}>
+            </div>
+            <div class="txtb">
+                <label for="numberofportions"> Number of portions </label>
+                <input type="number" name="numberofportions" id="numberofportions" min="1" max="10"
+                    value={{recipe.numberofportions}}>
+            </div>
+            <div class="txtb">
+                <label for="preparationTime"> Preparation time </label>
+                <input type="text" name="preparationTime" id="preparationTime" value={{recipe.preparationTime}}>
+            </div>
+            <div class="txtb">
+                <label for="cookingTime"> Cooking time </label>
+                <input type="text" name="cookingTime" id="cookingTime" value={{recipe.cookingTime}}>
+            </div>
+            <div class="txtb">
+                <label for="linktotheoriginalrecipe"> Link to the original recipe</label>
+                <input type="url" name="linktotheoriginalrecipe" id="linktotheoriginalrecipe"
+                    value={{recipe.linkToTheOriginalRecipe}}>
+            </div>
         </div>
-        <div class="txtb">
-            <label for="typeOfCuisine"> Type of cuisine </label>
-            <input type="text" name="typeOfCuisine" id="typeOfCuisine" value={{recipe.typeOfCuisine}}>
+        <div class="create-form createform2">
+            <div class="txtb">
+                <label for="ingredients"> Ingredients</label>
+                <input type="text" name="ingredients" id="ingredients" value={{recipe.ingredients}}>
+            </div>
+            <div class="txtb">
+                <label for="method"> Method</label>
+                <input type="text" name="method" id="method" value={{recipe.method}}>
+            </div>
+        </div><br>
+        <div class="create-form createform3">
+            <div class="txtb">
+                <label for="notes"> Notes</label>
+                <input type="text" name="notes" id="notes" value={{recipe.notes}}>
+                <textarea></textarea>
+            </div>
+            <div class="txtb">
+                <label for="Recipe image">Recipe image</label>
+                <input type="file" name="foodimage" id="foodimage">
+            </div>
+            <button type="submit">Submit</button>
         </div>
-        <div class="txtb">
-            <label for="dishType">Type of dish</label>
-            <select class="txtb" id="dishType" name="dishType" size="1">
-                <option value="breakfast">breakfast</option>
-                <option value="main course">main course</option>
-                <option value="side dish">side dish</option>
-                <option value="drink">drink</option>
-                <option value="dessert">dessert</option>
-                <option value="appetizer">appetizer</option>
-                <option value="other">other</option>
-            </select>
-        </div>
-        <div class="txtb">
-            <label for="difficultyLevel">Level of difficulty </label>
-            <input type="text" name="difficultyLevel" id="difficultyLevel" value={{recipe.difficultyLevel}}>
-        </div>
-        <div class="txtb">
-            <label for="numberofportions"> Number of portions </label>
-            <input type="number" name="numberofportions" id="numberofportions" min="1" max="10"
-                value={{recipe.numberofportions}}>
-        </div>
-        <div class="txtb">
-            <label for="preparationTime"> Preparation time </label>
-            <input type="text" name="preparationTime" id="preparationTime" value={{recipe.preparationTime}}>
-        </div>
-        <div class="txtb">
-            <label for="cookingTime"> Cooking time </label>
-            <input type="text" name="cookingTime" id="cookingTime" value={{recipe.cookingTime}}>
-        </div>
-        <div class="txtb">
-            <label for="ingredients"> Ingredients</label>
-            <input type="text" name="ingredients" id="ingredients" value={{recipe.ingredients}}>
-        </div>
-        <div class="txtb">
-            <label for="method"> Method</label>
-            <input type="text" name="method" id="method" value={{recipe.method}}>
-        </div>
-        <div class="txtb">
-            <label for="linktotheoriginalrecipe"> Link to the original recipe</label>
-            <input type="url" name="linktotheoriginalrecipe" id="linktotheoriginalrecipe"
-                value={{recipe.linkToTheOriginalRecipe}}>
-        </div>
-        <div class="txtb">
-            <label for="notes"> Notes</label>
-            <input type="text" name="notes" id="notes" value={{recipe.notes}}>
-            <textarea></textarea>
-        </div>
-        <div class="txtb">
-            <label for="Recipe image">Recipe image</label>
-            <input type="file" name="foodimage" id="foodimage">
-        </div>
-        <button type="submit">Submit</button>
     </form>
 </div>
 </div>
