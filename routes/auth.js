@@ -25,7 +25,7 @@ authRouter.post("/signup", (req, res, next) => {
     } = req.body;
     if (userName === "" || email === "" || password === "") {
         res.render("auth/signup", {
-            errorMessage: "Indicates a valid User Name, Email and/or Password"
+            errorMessage: "Indicate a valid User Name, Email and/or Password"
         })
         return
     }

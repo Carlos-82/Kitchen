@@ -1,10 +1,6 @@
 
 
-{{#if errorMessage}}
-  <p class="error-message">
-    {{ errorMessage }}
-  </p>
-{{/if}}
+
 <div class="contact-form loginform">
  <h1>Log In</h1> 
  <form action="/auth/login" method="post">
@@ -19,9 +15,13 @@
       placeholder="e.g., ••••••••••••">
   </div>
 <button class="formbtn"> Log In </button>
-<p>
+<p class="textsign">
   Don't have an account?
   <a class="formlink" href="/auth/signup">
     Create one.
   </a>
-</p></form></div>
+</p>{{#if errorMessage}}
+  <p class="error-message">
+    {{ errorMessage }}
+  </p>
+{{/if}}</form></div>
