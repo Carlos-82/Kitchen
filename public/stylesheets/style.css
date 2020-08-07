@@ -10,6 +10,7 @@
 body {
   background: #fcdfbf;
 }
+
 a {
   color: #00B7FF;
 }
@@ -88,7 +89,7 @@ header.sticky ul li a {
 /*Slider index.hbs*/
 #slider {
   overflow: hidden;
-  margin-top:80px;
+  margin-top: 80px;
 }
 
 #slider figure {
@@ -142,6 +143,7 @@ header.sticky ul li a {
   90% {
     left: -400%;
   }
+
   100% {
     left: -400%;
   }
@@ -178,6 +180,8 @@ header.sticky ul li a {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out;
   border-radius: 16px;
+  border: solid;
+  border-color: #628B8F;
 }
 
 .container .card:hover {
@@ -192,6 +196,8 @@ header.sticky ul li a {
   border-radius: 16px;
   z-index: 1;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  border: solid;
+  border-color: red;
 }
 
 .container .card .imgBx img {
@@ -273,10 +279,11 @@ header.sticky ul li a {
   box-shadow: 0 0 20px #000000b3;
   margin-top: 25rem;
 }
-.error-message{
-  font-size:18px;
-  color:rgb(182, 19, 19);
-  margin-top:10px;
+
+.error-message {
+  font-size: 18px;
+  color: rgb(182, 19, 19);
+  margin-top: 10px;
 }
 
 .txtb {
@@ -313,15 +320,17 @@ header.sticky ul li a {
   margin-top: 8px;
   width: 60%;
   border-radius: 16px;
-  font-size:20px;
+  font-size: 20px;
 }
-.formbtn a{
-  text-decoration:none;
-  color:white;
+
+.formbtn a {
+  text-decoration: none;
+  color: white;
 }
-.textsign{
-  font-size:18px;
-  margin-top:10px;
+
+.textsign {
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 .formlink {
@@ -378,8 +387,9 @@ header.sticky ul li a {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.upimage{
-  font-size:14px;
+
+.upimage {
+  font-size: 14px;
 }
 
 /*Profile*/
@@ -439,7 +449,7 @@ header.sticky ul li a {
   margin-bottom: 3rem;
   font-size: 20px;
   color: black;
-  
+
 }
 
 .button-profile {
@@ -465,7 +475,8 @@ header.sticky ul li a {
   font-size: 18px;
   margin-bottom: 10px;
 }
-.contentprofile h3{
+
+.contentprofile h3 {
   font-size: 25px;
 }
 
@@ -500,6 +511,10 @@ header.sticky ul li a {
     height: 100px;
   }
 
+  header ul {
+    margin-right: 30px;
+  }
+
   header ul li {
     font-size: 20px;
   }
@@ -507,14 +522,16 @@ header.sticky ul li a {
   header ul li a {
     font-size: 30px;
   }
+
   #slider {
-  
-    margin-top:150px;
+
+    margin-top: 150px;
   }
-  .maincontainer{
-    font-size:30px;
+
+  .maincontainer {
+    font-size: 30px;
   }
-    
+
 
   .bodymainpage {
     margin-top: 20px
@@ -525,7 +542,7 @@ header.sticky ul li a {
   }
 
   .container .card:hover {
-    height: 420px;
+    height: 500px;
   }
 
   .container .card .imgBx {
@@ -534,7 +551,7 @@ header.sticky ul li a {
   }
 
   .container .card .content {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .loginform {
@@ -551,14 +568,17 @@ header.sticky ul li a {
   .txtb textarea {
     font-size: 30px;
   }
-  .textsign{
-    font-size:25px;
-  }
-  .formbtn{
+
+  .textsign {
     font-size: 25px;
   }
-  .error-message{
-    font-size:25px;
+
+  .formbtn {
+    font-size: 25px;
+  }
+
+  .error-message {
+    font-size: 25px;
   }
 
   .bodyprofile {
@@ -569,32 +589,40 @@ header.sticky ul li a {
     margin: 10rem 5rem;
     text-align: center;
   }
-  .createcontainer h2{
-    font-size:40px;
+
+  .createcontainer h2 {
+    font-size: 40px;
   }
+
   .create-form {
     width: 100%;
-    font-size:25px;
+    font-size: 25px;
   }
-  .create-form h1{
-    font-size:40px;
+
+  .create-form h1 {
+    font-size: 40px;
   }
-  .txtb select{
-    font-size:30px;
-    padding:10px;
+
+  .txtb select {
+    font-size: 30px;
+    padding: 10px;
   }
-.contentprofile h3{
-  font-size: 30px;
-}
-  .hello{
-    font-size:30px;
+
+  .contentprofile h3 {
+    font-size: 30px;
   }
+
+  .hello {
+    font-size: 30px;
+  }
+
   .profileimage {
     transform: translateX(-5rem);
     position: relative;
   }
-  .profiletext p{
-    font-size:25px;
+
+  .profiletext p {
+    font-size: 25px;
   }
 
   .containerprofile {
@@ -605,7 +633,8 @@ header.sticky ul li a {
     justify-content: center;
     align-items: center;
   }
-  .recipeimg{
+
+  .recipeimg {
     max-width: 30rem;
   }
 
